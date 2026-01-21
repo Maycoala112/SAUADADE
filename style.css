@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #cfcfcf;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INTRO */
+#intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#intro p {
+  font-size: 20px;
+  margin: 0;
+}
+
+#intro span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* PIANO */
+#piano {
+  position: relative;
+}
+
+/* BRANCAS */
+.white-keys {
+  display: flex;
+}
+
+.white {
+  width: 60px;
+  height: 180px;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  position: relative;
+  z-index: 1;
+}
+
+/* PRETAS */
+.black-keys {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+}
+
+.black {
+  width: 40px;
+  height: 110px;
+  background: #000;
+  position: absolute;
+  z-index: 2;
+}
+
+/* POSIÇÕES DAS PRETAS (ENTRE AS BRANCAS) */
+.black:nth-child(1) { left: 45px; }
+.black:nth-child(2) { left: 105px; }
+.black:nth-child(3) { left: 225px; }
+
+/* INTERAÇÃO */
+.key {
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.active {
+  background: #ddd !important;
+  box-shadow: 0 0 18px #fff;
+}
+
+/* FINAL */
+#final {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#final p {
+  margin-bottom: 20px;
+}
+
+#final iframe {
+  width: 640px;
+  height: 360px;
+  border: none;
+  border-radius: 8px;
+}
